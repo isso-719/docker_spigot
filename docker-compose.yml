@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  spigot:
+    image: itzg/minecraft-server
+    restart: always
+    environment:
+      EULA: "TRUE"
+      ONLINE_MODE: "FALSE"
+      TYPE: "SPIGOT"
+    ports:
+    - "25566:25565"
+    volumes:
+      - ./src:/data
